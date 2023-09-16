@@ -58,7 +58,7 @@ const Container = () => {
 
                         <div className="absolute bottom-0 right-0 bg-black flex justify-between w-3/12">
                             <button className="active:bg-VeryDarkGray py-5 px-6" onClick={prevSlide} disabled={slide == 0}>
-                               <img  src={left}/>
+                               <img className="w-10 h-auto" src={left}/>
                             </button>
 
                             <button className="active:bg-VeryDarkGray py-5 px-6" onClick={nextSlide} disabled={slide == 2}>
