@@ -62,7 +62,7 @@ const Container = () => {
                             </button>
 
                             <button className="active:bg-VeryDarkGray py-5 px-6" onClick={nextSlide} disabled={slide == 2}>
-                                <img src={right}/>
+                                <img className="w-10 h-auto" src={right}/>
                             </button>
                         </div>
                     </div>
