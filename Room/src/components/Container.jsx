@@ -10,7 +10,6 @@ import left from './assets/icon-angle-left.svg'
 import right from './assets/icon-angle-right.svg'
 import dark from './assets/image-about-dark.jpg'
 import light from './assets/image-about-light.jpg'
-import Navigations from "./Navigations";
 import { useState } from 'react';
 import Slide1 from './Slide1'
 import Slide2 from './Slide2'
@@ -28,7 +27,6 @@ const Container = () => {
     }
 
     const heading = ["Discover innovative ways to decorate", "We are available all across the globe", "Manufactured with the best materials"];
-    const images =[{src: hero1}, {src: hero2}, {src: hero3}]
 
     const pageDisplay = () =>{
         if (slide === 0){
@@ -43,16 +41,19 @@ const Container = () => {
     }
 
     return ( 
-        <div className="font-Primary h-screen lg:overflow-y-hidden overflow-y-auto">
+        <div className="font-Primary h-screen lg:overflow-y-hidden overflow-y-auto overflow-x-hidden">
             <div className="lg:flex">
                 <div className="relative lg:flex-shrink-0 lg:flex-nowrap">
-                    <Navigations/>
 
-                    <img className="hidden lg:block w-full h-[70vh]" src={hero1}/>
+
+                    <div className="">
+                      <img className="hidden lg:block w-full h-[70vh]" src={hero1} />
+                    </div>
+
+
                     
                     {/* mobile */}
                     <div className="relative lg:hidden block">
-                        <Navigations/>
                         <img className="w-full" src={mobilehero1}/>
 
                         <div className="absolute bottom-0 right-0 bg-black flex justify-between w-3/12">
