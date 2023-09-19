@@ -58,11 +58,11 @@ const Container = () => {
 
                         <div className="absolute bottom-0 right-0 bg-black flex justify-between w-3/12">
                             <button className="active:bg-VeryDarkGray py-5 flex-shrink-0 flex-nowrap px-6" onClick={prevSlide} disabled={slide == 0}>
-                               <img className="w-10 h-auto" src={left}/>
+                               <img className="" src={left}/>
                             </button>
 
                             <button className="active:bg-VeryDarkGray py-5 flex-shrink-0 flex-nowrap px-6" onClick={nextSlide} disabled={slide == 2}>
-                                <img className="w-10 h-auto" src={right}/>
+                                <img className="" src={right}/>
                             </button>
                         </div>
                     </div>
