@@ -46,16 +46,16 @@ const Container = () => {
         hero3,
         ]
         
-    const [image, setImage] = useState(0)
+    const [slide, setImage] = useState(0)
         
     const DisplayImage =()=>{
-        if (image === 0){
+        if (slide === 0){
             return hero1;
             }
-        else if (image === 1){
+        else if (slide === 1){
             return hero2;
             }
-        else if (image === 2){
+        else if (slide === 2){
             return hero3;
             }
         }
