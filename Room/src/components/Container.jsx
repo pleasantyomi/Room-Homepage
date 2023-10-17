@@ -40,25 +40,7 @@ const Container = () => {
         }
     }
     
-    const Images = [
-        hero1,
-        hero2,
-        hero3,
-        ]
-        
-    const [image, setImage] = useState(0)
-        
-    const DisplayImage =()=>{
-        if (image === 0){
-            return hero1;
-            }
-        else if (image === 1){
-            return hero2;
-            }
-        else if (image === 2){
-            return hero3;
-            }
-        }
+    
 
     return ( 
         <div className="font-Primary h-screen lg:overflow-y-hidden overflow-y-auto overflow-x-hidden">
