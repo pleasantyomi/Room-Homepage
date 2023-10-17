@@ -39,6 +39,26 @@ const Container = () => {
             return <Slide3/>;
         }
     }
+    
+    const Images = [
+        hero1,
+        hero2,
+        hero3,
+        ]
+        
+    const [image, setImage] = useState(0)
+        
+    const DisplayImage =()=>{
+        if (image === 0){
+            return hero1;
+            }
+        else if (image === 1){
+            return hero2;
+            }
+        else if (image === 2){
+            return hero3;
+            }
+        }
 
     return ( 
         <div className="font-Primary h-screen lg:overflow-y-hidden overflow-y-auto overflow-x-hidden">
@@ -46,8 +66,8 @@ const Container = () => {
                 <div className="relative lg:flex-shrink-0 lg:flex-nowrap">
 
 
-                    <div className="">
-                      <img className="hidden lg:block w-full h-[70vh]" src={hero1} />
+                    <div className="hidden lg:block w-full h-[70vh]">
+                      <{DisplayImage()}/>
                     </div>
 
 
