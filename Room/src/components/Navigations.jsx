@@ -7,9 +7,6 @@ import './Navigations.css'
 const Navigations = () => {
     const [open, isOpen] = useState(false)
 
-
-    
-
     return ( 
         <div className="flex  absolute z-10 gap-10 lg:ml-14 lowercase items-center text-white">
             <div className="lg:hidden block">

@@ -40,6 +40,52 @@ const Container = () => {
         }
     }
 
+    const images = [
+        hero1,
+        hero2,
+        hero3
+    ]
+
+    const mobileImages = [
+        mobilehero1,
+        mobilehero2,
+        mobilehero3
+    ]
+
+    const [Image, setImage] = useState(0)
+
+    const previousImage = () => {
+        setImage(Image - 1)
+    }
+
+    const nextImage = () => {
+        setImage(Image + 1)
+    }
+
+    const DisplayImage = () => {
+        if (Image === 0){
+            return hero1;
+        }
+        else if (Image === 1){
+            return hero2;
+        }
+        else if (Image === 2){
+            return hero3;
+        }
+    }
+
+    const DisplaymobileImage = () => {
+        if (Image === 0){
+            return mobilehero1;
+        }
+        else if (Image === 1){
+            return mobilehero2;
+        }
+        else if (Image === 2){
+            return mobilehero3;
+        }
+    }
+
     return ( 
         <div className="font-Primary h-screen lg:overflow-y-hidden overflow-y-auto overflow-x-hidden">
             <div className="lg:flex">
@@ -47,21 +93,27 @@ const Container = () => {
 
 
                     <div className="">
-                      <img className="hidden lg:block w-full h-[70vh]" src={hero1} />
+                      <img className="hidden lg:block w-full h-[70vh]" src={DisplayImage()} />
                     </div>
 
 
                     
                     {/* mobile */}
                     <div className="relative lg:hidden block">
-                        <img className="w-full" src={mobilehero1}/>
+                        <img className="w-full" src={DisplaymobileImage()}/>
 
                         <div className="absolute bottom-0 right-0 bg-black flex justify-between w-3/12">
-                            <button className="active:bg-VeryDarkGray py-5 px-6" onClick={prevSlide} disabled={slide == 0}>
+                            <button className="active:bg-VeryDarkGray py-5 px-6" onClick={()=>{
+                                prevSlide();
+                                previousImage();
+                            }} disabled={slide == 0}>
                                <img className="w-10 h-auto" src={left}/>
                             </button>
 
-                            <button className="active:bg-VeryDarkGray py-5 px-6" onClick={nextSlide} disabled={slide == 2}>
+                            <button className="active:bg-VeryDarkGray py-5 px-6" onClick={()=>{
+                                nextSlide();
+                                nextImage();
+                            }} disabled={slide == 2}>
                                 <img className="w-10 h-auto" src={right}/>
                             </button>
                         </div>
@@ -78,11 +130,17 @@ const Container = () => {
                     </a>
 
                     <div className="hidden absolute bottom-0 left-0 bg-black lg:flex justify-between w-3/12">
-                        <button className="active:bg-VeryDarkGray py-5 px-6" onClick={prevSlide} disabled={slide == 0 }>
+                        <button className="active:bg-VeryDarkGray py-5 px-6" onClick={()=>{
+                                prevSlide();
+                                previousImage();
+                            }} disabled={slide == 0 }>
                            <img  src={left}/>
                         </button>
 
-                        <button className="active:bg-VeryDarkGray py-5 px-6" onClick={nextSlide} disabled={slide == 2}>
+                        <button className="active:bg-VeryDarkGray py-5 px-6" onClick={()=>{
+                                nextSlide();
+                                nextImage();
+                            }} disabled={slide == 2}>
                            <img src={right}/>
                         </button>
                     </div>
