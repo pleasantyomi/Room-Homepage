@@ -96,14 +96,14 @@ const Container = () => {
 
 
                     <div className="">
-                      <img className="hidden lg:block w-full h-[70vh]" src={DisplayImage()} />
+                      <img className="hidden lg:block w-full h-[70vh] transition delay-500" src={DisplayImage()} />
                     </div>
 
 
                     
                     {/* mobile */}
                     <div className="relative lg:hidden block">
-                        <img className="w-full" src={DisplaymobileImage()}/>
+                        <img className="w-full transition delay-500" src={DisplaymobileImage()}/>
 
                         <div className="absolute bottom-0 right-0  bg-black flex justify-between w-fit">
 
@@ -125,8 +125,12 @@ const Container = () => {
                 </div>
 
                 <div className="relative lg:mt-24 lg:px-20 px-10 mt-10">
-                    <h1 className="font-bold text-[40px] leading-none lg:mb-6 mb-5">{heading[slide]}</h1>
-                    <p className="text-DarkGray">{pageDisplay()}</p>
+                    <div className="transition delay-500">
+                        <h1 className="font-bold text-[40px] leading-none lg:mb-6 mb-5">{heading[slide]}</h1>
+                        <p className="text-DarkGray">{pageDisplay()}</p>             
+                    </div>
+
+
 
                     <a className="flex items-center gap-3 lg:mt-3 my-6 cursor-pointer hover:text-VeryDarkGray">
                         <p className="uppercase tracking-[10px] font-semibold text-sm">Shop now</p>
