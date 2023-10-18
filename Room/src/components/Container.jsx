@@ -105,20 +105,20 @@ const Container = () => {
                     <div className="relative lg:hidden block">
                         <img className="w-full" src={DisplaymobileImage()}/>
 
-                        <div className="absolute bottom-0 right-0 bg-black flex justify-between w-3/12">
+                        <div className="absolute bottom-0 right-0  bg-black flex justify-between w-fit">
 
-                            <button className="active:bg-VeryDarkGray py-5 px-6" onClick={()=>{
+                            <button className="active:bg-VeryDarkGray py-5 px-6 flex-shrink-0 flex-nowrap" onClick={()=>{
                                 prevSlide();
                                 previousImage();
                             }} disabled={slide == 0}>
-                               <img className="w-10 h-auto" src={left}/>
+                               <img className="w-4 h-auto" src={left}/>
                             </button>
 
-                            <button className="active:bg-VeryDarkGray py-5 px-6" onClick={()=>{
+                            <button className="active:bg-VeryDarkGray py-5 px-6 flex-shrink-0 flex-nowrap" onClick={()=>{
                                 nextSlide();
                                 nextImage();
                             }} disabled={slide == 2}>
-                                <img className="w-10 h-auto" src={right}/>
+                                <img className="w-4 h-auto" src={right}/>
                             </button>
                         </div>
                     </div>
@@ -134,14 +134,14 @@ const Container = () => {
                     </a>
 
                     <div className="hidden absolute bottom-0 left-0 bg-black lg:flex justify-between w-3/12">
-                        <button className="active:bg-VeryDarkGray py-5 px-6" onClick={()=>{
+                        <button className="active:bg-VeryDarkGray py-5 px-6 flex-shrink-0 flex-nowrap" onClick={()=>{
                                 prevSlide();
                                 previousImage();
                             }} disabled={slide == 0 }>
                            <img  src={left}/>
                         </button>
 
-                        <button className="active:bg-VeryDarkGray py-5 px-6" onClick={()=>{
+                        <button className="active:bg-VeryDarkGray py-5 px-6 flex-shrink-0 flex-nowrap" onClick={()=>{
                                 nextSlide();
                                 nextImage();
                             }} disabled={slide == 2}>
