@@ -96,7 +96,7 @@ const Container = () => {
 
 
                     <div className="">
-                      <img className="hidden lg:block w-6/12 h-[70vh] transition delay-500" src={DisplayImage()} />
+                      <img className="hidden lg:block w-full h-[70vh] transition delay-500" src={DisplayImage()} />
                     </div>
 
 
