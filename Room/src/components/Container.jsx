@@ -96,7 +96,7 @@ const Container = () => {
 
 
                     <div className="">
-                      <img className="hidden lg:block w-full h-[70vh] transition delay-500" src={DisplayImage()} />
+                      <img className="hidden lg:block w-[50vw] h-[70vh] object-cover transition delay-500" src={DisplayImage()} />
                     </div>
 
 
@@ -159,15 +159,14 @@ const Container = () => {
                 <div className="lg:flex-nowrap lg:flex-shrink-0">
                     <img className="w-full " src={dark}/>
                 </div>
-
-                <div className="px-10 pt-10">
+ 
+                <div className="px-10 pt-10 ">
                     <h1 className="font-semibold uppercase tracking-[7px] text-sm mb-4">About our furniture</h1>
                     <p className="text-DarkGray text-sm mb-10 lg:mb-0">Our multifunctional collection blends design and function to suit your individual taste.
                         Make each room unique, or pick a cohesive theme that best express your interests and what
                         inspires you. Find the furniture pieces you need, from traditional to contemporary styles
                         or anything in between. Product specialists are available to help you create your dream space.
                     </p>
-
                 </div>
 
                 <div className="flex-nowrap flex-shrink-0">
